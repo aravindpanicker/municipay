@@ -3,11 +3,12 @@
 namespace Omnipay\Municipay\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
+use Omnipay\Common\Message\ResponseInterface;
 
 /**
  * Municipay Complete Purchase Response
  */
-class CompletePurchaseResponse extends AbstractResponse
+class CompletePurchaseResponse extends AbstractResponse implements ResponseInterface
 {
     public function isSuccessful()
     {
@@ -16,6 +17,6 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getTransactionReference()
     {
-        return isset($this->data['npsTransactionId']) ? $this->data['npsTransactionId'] : null;
+        return isset($this->data['transactionId']) ? $this->data['transactionId'] : null;
     }
 }
