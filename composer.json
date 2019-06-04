@@ -8,7 +8,7 @@
         "merchant",
         "omnipay",
         "pay",
-        "payment",
+        "payment"
     ],
     "homepage": "https://github.com/aravindpanicker/municipay",
     "license": "MIT",
