@@ -1,7 +1,7 @@
 {
     "name": "aravindpanicker/omnipay-municipay",
     "type": "library",
-    "description": "municipay driver for the Omnipay payment processing library",
+    "description": "MuniciPAY 2.0 driver for the Omnipay payment processing library",
     "keywords": [
         "municipay",
         "gateway",

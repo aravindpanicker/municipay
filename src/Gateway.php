@@ -5,7 +5,7 @@ namespace Omnipay\Municipay;
 use Omnipay\Common\AbstractGateway;
 
 /**
- * Municipay Gateway
+ * MuniciPAY Gateway
  *
  */
 class Gateway extends AbstractGateway
@@ -17,10 +17,10 @@ class Gateway extends AbstractGateway
 
     public function getDefaultParameters()
     {
-        return array(
+        return [
             'siteId' => '',
             'urlKey' => '',
-            'demo' => false,
+            'demoMode' => false,
             'amount' => '',
             'transactionId' => '',
             'cartId' => '',
@@ -31,7 +31,7 @@ class Gateway extends AbstractGateway
             'npsLastName' => '',
             'npsTransactionId' => '',
             'npsCFAmount' => '',
-        );
+        ];
     }
 
     public function getSiteId()
@@ -76,12 +76,12 @@ class Gateway extends AbstractGateway
 
     public function getDemoMode()
     {
-        return $this->getParameter('demo_mode');
+        return $this->getParameter('demoMode');
     }
 
     public function setDemoMode($value)
     {
-        return $this->setParameter('demo_mode', $value);
+        return $this->setParameter('demoMode', $value);
     }
 
     public function getAmount()

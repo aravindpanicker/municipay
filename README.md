@@ -4,7 +4,7 @@
 
 ### MuniciPAY driver for the Omnipay payment processing library
 
-[Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment processing library for PHP 5.3+. This package implements MuniciPAY support for Omnipay.
+[Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment processing library for PHP 5.3+. This package implements MuniciPAY 2.0 support for Omnipay.
 
 ## Installation
 

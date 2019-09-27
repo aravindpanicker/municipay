@@ -6,26 +6,51 @@ use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RedirectResponseInterface;
 
 /**
- * 2Checkout Purchase Response
+ * MuniciPAY Purchase Response
  */
 class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
-    protected $endpoint = 'https://trx.npspos.com/payapp/public/WSRequest.html';
-    protected $demo_endpoint = 'https://demo.npspos.com/payapp/public/WSRequest.html';
+    protected $liveEndpoint = 'https://secure.municipay.com/payapp/public/WSRequest.html';
+    protected $demoEndpoint = 'https://demo.municipay.com/payapp/public/WSRequest.html';
 
+    /**
+     * Get appropriate MuniciPAY endpoint
+     * 
+     * @return string
+     */
+    public function getEndPoint()
+    {
+        if ($this->data['demo']) {
+            return $this->demoEndpoint;
+        } else {
+            return $this->liveEndpoint;
+        }
+    }
+
+    /**
+     * @return bool
+     */
     public function isSuccessful()
     {
         return false;
     }
 
+    /**
+     * @return bool
+     */
     public function isRedirect()
     {
         return true;
     }
 
+    /**
+     * @return string
+     */
     public function getRedirectUrl()
     {
-        return $this->endpoint .'?'.http_build_query($this->data);
+        $endpint = $this->getEndPoint();
+        unset($this->data['demo']);
+        return $endpint . '?' . http_build_query($this->data);
     }
 
     public function getRedirectMethod()

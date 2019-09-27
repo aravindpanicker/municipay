@@ -6,7 +6,7 @@ use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\ResponseInterface;
 
 /**
- * Municipay Complete Purchase Response
+ * MuniciPAY Complete Purchase Response
  */
 class CompletePurchaseResponse extends AbstractResponse implements ResponseInterface
 {

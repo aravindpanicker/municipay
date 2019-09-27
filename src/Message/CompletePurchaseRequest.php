@@ -5,7 +5,7 @@ namespace Omnipay\Municipay\Message;
 use Omnipay\Common\Exception\InvalidResponseException;
 
 /**
- * Omnipay Complete Purchase Request
+ * MuniciPAY Complete Purchase Request
  */
 class CompletePurchaseRequest extends PurchaseRequest
 {
